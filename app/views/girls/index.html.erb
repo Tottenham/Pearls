@@ -13,6 +13,6 @@
 <div class="rightSection">
 	<h3>The Gallery</h3>
 	<% @girls.each do |girl| %>
-		<%= render "layouts/girl_box", :girl => girl %>
+		<%= render "layouts/girl_box", :girl => girl unless girl.blank? %>
 	<% end %>
 </div>
