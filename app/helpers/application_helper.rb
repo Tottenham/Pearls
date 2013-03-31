@@ -5,14 +5,24 @@ module ApplicationHelper
 		false
 	end
 
-	def asset_object(id)
+	def find_asset(id)
 		asset = Asset.find(:last, :conditions => {:girl_id => id, :classification => "main"})
+		return asset
+	end		
+
+	def asset_object(id)
+		asset = find_asset(id)
 		return asset unless asset.blank?
 	end
 
 	def asset_object_id(id)
-		asset = Asset.find(:last, :conditions => {:girl_id => id, :classification => "main"})
+		asset = find_asset(id)
 		return asset.id unless asset.blank?
+	end
+
+	def asset_object_name(id)
+		asset = find_asset(id)
+		return asset.image_file_name unless asset.blank?
 	end
 
 	def true_to_yes(boolean)
