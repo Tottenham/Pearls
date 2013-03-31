@@ -10,6 +10,11 @@ module ApplicationHelper
 		return asset unless asset.blank?
 	end
 
+	def asset_object_id(id)
+		asset = Asset.find(:last, :conditions => {:girl_id => id, :classification => "main"})
+		return asset.id unless asset.blank?
+	end
+
 	def true_to_yes(boolean)
 		if boolean == true
 			return "Yes"
