@@ -34,4 +34,13 @@ Pearls::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['pearlsgirlsimages'],
+      :access_key_id => ENV['AKIAJYCV5UCTV3THVH3A'],
+      :secret_access_key => ENV['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']
+    }
+  }
 end

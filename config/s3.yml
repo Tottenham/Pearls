@@ -1,0 +1,8 @@
+development:
+  access_key_id: AKIAJYCV5UCTV3THVH3A
+  secret_access_key: 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
+  bucket: pearlsgirlsimages
+production:
+  access_key_id: AKIAJYCV5UCTV3THVH3A
+  secret_access_key: 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
+  bucket: pearlsgirlsimages

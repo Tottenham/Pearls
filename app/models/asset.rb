@@ -3,9 +3,10 @@ class Asset < ActiveRecord::Base
 
   belongs_to  :girl
 
-  has_attached_file  :image,
-    :url => "/assets/images/:id/:style/:basename.:extension",
-    :path => ":rails_root/public/system/:id/:style/:basename.:extension"
+	has_attached_file :image,
+	  :storage => :s3,
+	  :s3_credentials => "#{Rails.root}/config/s3.yml",
+	  :bucket => "pearlsgirlsimages";
 
   validates_presence_of :image_file_name
 end
