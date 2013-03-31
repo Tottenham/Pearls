@@ -1,5 +1,5 @@
 class AddColumnFeaturedToGirls < ActiveRecord::Migration
   def change
-    add_column :girls, :featured, :boolean
+    add_column :girls, :featured, :integer
   end
 end

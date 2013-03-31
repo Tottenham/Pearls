@@ -1,5 +1,5 @@
 class AddTonightToGirls < ActiveRecord::Migration
   def change
-    add_column :girls, :tonight, :boolean
+    add_column :girls, :tonight, :integer
   end
 end
