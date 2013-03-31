@@ -6,7 +6,7 @@ module ApplicationHelper
 	end
 
 	def find_asset(id)
-		asset = Asset.find(:last, :conditions => {:girl_id => id, :classification => "main"})
+		asset = Asset.find(:last, :conditions => {:girl_id => id, :classification => "Main"})
 		return asset
 	end		
 
