@@ -74,4 +74,10 @@ class GirlsController < ApplicationController
     @girls = Girl.where(:tonight => 1)
     @categories = Category.for(@girls)
   end
+
+  def destroy
+    @girl = Girl.find(params[:id])
+    @girl.destroy
+    redirect_to('/girls/admin_index')
+  end
 end
