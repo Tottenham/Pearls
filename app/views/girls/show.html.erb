@@ -1,0 +1,78 @@
+<div class="contentInner">
+
+	<div class="leftContactBox">
+		<div class="bookBox">
+			<div class="bookBoxTitle">Book this Girl</div>
+			<div class="bookBoxContent">
+				<div class="bookBoxContentLeft">
+					<%= image_tag("phone.png") %>
+				</div>
+				<div class="bookBoxContentRight">
+					020 7118 6969
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="rightSection">
+		<div class="girlShowBox">
+
+			<img src="<%= main_image(@girl.id) %>">
+
+			<div class="showBoxTitle"><%= @girl.name %></div>
+
+			<div class="showBoxDesc">
+				Slim with a delicious enhanced DD bust and perfect English, Anita is a classy sophisticated woman! Always arriving looking her best, expect the unexpected when booking this leggy brunette! Enjoy an evening of naughtiness with Playgirl Anita, call to book now!
+			</div>
+
+			<div class="showBoxInfo">
+				<div class="showBoxInfoLeft">
+					Name:<br />
+					Age:<br />
+					Nationality:<br />
+					Dress Size:<br />
+					Bust Size:<br />
+					Orientation:
+				</div>
+				<div class="showBoxInfoRight">
+					<%= @girl.name %><br />
+					<%= @girl.age %><br />
+					<%= @girl.nationality %><br />
+					<%= @girl.dress_size %><br />
+					<%= @girl.bust_size %><br />
+					<%= @girl.orientation %>
+				</div>
+			</div>
+		</div>
+
+		<div class="showPageContent">
+
+			<div class="showPageMain">
+				<% @images.each do |image| %>
+					<img src="<%= image_path(image) %>">
+				<% end %>
+
+			</div>
+
+			<div class="ratesBox">
+				<div class="ratesBoxTitle">Rates</div>
+				<div class="ratesBoxContent">
+					These are all inclusive rates which include the escorts travelling expenses.
+					<div class="ratesBoxInfoLeft">
+						First Hour:<br />
+						Additional 30 mins:<br />
+						Additional Hour(s):<br />
+						Overnight (8 hours):
+					</div>
+					<div class="ratesBoxInfoRight">
+						£110<br />
+						£60<br />
+						£100<br />
+						£750
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

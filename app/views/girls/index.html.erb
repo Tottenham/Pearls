@@ -1,0 +1,18 @@
+<div class="leftSection">
+	<h3>
+		Categories
+	</h3>
+	<ul>
+		<li><%= link_to "All", "/girls" %>
+		<% @categories.each do |category| %>
+			<li><%= link_to category.title, "/girls?category=#{category.title}" %></li>
+		<% end %>
+	</ul>
+</div>
+
+<div class="rightSection">
+	<h3>The Gallery</h3>
+	<% @girls.each do |girl| %>
+		<%= render "layouts/girl_box", :girl => girl %>
+	<% end %>
+</div>

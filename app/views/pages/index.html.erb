@@ -1,0 +1,39 @@
+<div class="pageLeft">
+	<div class="contentInner">
+
+		<%= image_tag("Woman_Silhouette.png", :class => "homepageSilhouette") %>
+
+		<div class="homepageContentTop">
+			<h1>Welcome to Pearls Girls</h1>
+			
+			<p>We are a luxury discreet visiting / outcall escort agency covering London and the Home Counties. <a href="/london-escorts">London</a>, <a href="/bedfordshire-escorts">Bedfordshire</a>, <a href="h/berkshire-escorts">Berkshire</a>, <a href="/buckinghamshire-escorts">Buckinghamshire</a>, <a href="/essex-escorts">Essex</a>, <a href="/hertfordshire-escorts">Hertfordshire</a>, <a href="/kent-escorts">Kent</a>, <a href="/middlesex-escorts">Middlesex</a>, <a href="/oxfordshire-escorts">Oxfordshire</a>, <a href="/surrey-escorts">Surrey</a></p>
+			<p>Please take your time to look around our website, in particular <b><a title="The Playgirls Gallery" href="/girls" target="_blank">The Pearls Girls Gallery</a></b> and <b><a title="Pearl's Promise" href="/promises" target="_blank">The Pearls Girls Promise</a></b> sections.</p>
+			<p>Our phone lines are open from <b>6pm </b>to <b>6am, 7 days a week – CALL NOW!</b></p>
+		</div>
+
+			<p>Each of our sexy and sophisticated Pearls Girls has been personally interviewed and specially selected to work exclusively for us. You will not be able to book any of our girls through any other agency and you will not find them on any other website!</p>
+			<p>We provide an ‘outcall service’ only, with each of our Pearls Girls having their own personal chauffeur, ensuring that they reach you within the fastest time possible.</p>
+			<p>The areas we cover include:</p>
+			<p><a href="/london-escorts">London</a>, <a href="/bedfordshire-escorts">Bedfordshire</a>, <a href="h/berkshire-escorts">Berkshire</a>, <a href="/buckinghamshire-escorts">Buckinghamshire</a>, <a href="/essex-escorts">Essex</a>, <a href="/hertfordshire-escorts">Hertfordshire</a>, <a href="/kent-escorts">Kent</a>, <a href="/middlesex-escorts">Middlesex</a>, <a href="/oxfordshire-escorts">Oxfordshire</a>, <a href="/surrey-escorts">Surrey</a></p>
+			<p>If you are not sure if Pearls Girls Escorts covers your area, CALL NOW! Our friendly and helpful receptionists are waiting to assist you.</p>
+			<p>The Pearls Girls Escorts website is also easily viewed on your mobile phone or PDA and is the ideal way to see our <span style="text-decoration: underline;">Girls</span> when you are on the move or for those last minute bookings when you are away from a computer. Just go to <span style="text-decoration: underline;"><a href="http://www.pearlsgirlsescorts.com/" target="_blank">www.pearlsgirlsescorts.com</a></span> <wbr />and you will be automatically re-directed to the mobile phone version of our website.</p>
+			<p>We look forward to hearing from you and hope you enjoy using our service.<br />
+			– The Pearls Girls Escorts Management</p>
+			<p>&nbsp;</p>
+			<p><b>Disclaimer</b></p>
+			<p><em>This site is intended for adult viewing and contains nudity and erotic images. Use this site only if you are legally entitled to access ‘adult sites’ as defined by the laws of the country where you live.</em></p>
+			<p><em>By entering this site, you confirm you are not entering it in any official or otherwise capacity and/or in order to download or copy images or text and/or to gain information for use in any media and/or to use against the owners of this site.</em></p>
+			<p><em>Money exchanged for legal adult escort services is for time and companionship only. Anything implied or inferred on this website is not to be taken as inducement for services other than this.</em></p>
+			<p><em>Any sexual activities that may take place as a result of or following an introduction made by Playgirls Escorts are between consenting adults and of the free will of the parties concerned, and are not part of the service contracted for.</em></p>
+			<p><em>If you are under 18 years of age and/or do not agree with the above statement, please leave this site now.</em></p>
+	</div>
+</div>
+
+<div class="pageRight">
+	<div class="contentInner">
+		<h2>Featured Girls</h2>
+		<% @promo_girls.each do |girl| %>
+			<%= render "layouts/girl_box", :girl => girl %>
+		<% end %>
+	</div>
+</div>

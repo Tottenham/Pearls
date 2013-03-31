@@ -1,0 +1,52 @@
+<% @attachment = @girl.assets.build %>
+<%= form_for @girl, :html => { :multipart => true } do |f| %>
+<p>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div> 
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </div> 
+  <div class="field">
+    <%= f.label :nationality %><br />
+    <%= f.text_field :nationality %>
+  </div> 
+  <div class="field">
+    <%= f.label :dress_size %><br />
+    <%= f.text_field :dress_size %>
+  </div> 
+  <div class="field">
+    <%= f.label :bust_size %><br />
+    <%= f.text_field :bust_size %>
+  </div> 
+  <div class="field">
+    <%= f.label :orientation %><br />
+    <%= f.text_field :orientation %>
+  </div> 
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.collection_select :category_id, @categories, :id, :title, {:prompt => 'Select Category'} %> 
+  </div>
+  <div class="field">
+    <%= f.label :featured %><br />
+    <%= f.check_box :featured %> 
+  </div>
+  <div class="field">
+    <%= f.label :tonight %><br />
+    <%= f.check_box :tonight %> 
+  </div>
+</p>
+
+  <div class="field">
+    <%= f.fields_for :assets, @attachment do |at_form| %>
+
+      <%= at_form.file_field :image %>
+      <%= at_form.hidden_field :classification, :value => "Main" %>
+
+    <% end %>
+  </div>
+
+<p><%= f.submit %></p>
+<% end %>

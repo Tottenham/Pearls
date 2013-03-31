@@ -1,0 +1,16 @@
+<div class="girlPromoBox">
+	<div class="girlName">
+		<%= girl.name %>
+	</div>
+	<a href="/girls/<%= girl.name %>"><img src="<%= main_image(girl.id) %>"></a>
+	<div class="girlPromoBottom">
+		<div class="girlPromoBottomCategory">
+			Nationality:<br />
+			Age:
+		</div>
+		<div class="girlPromoBottomValue">
+			<%= girl.nationality %><br />
+			<%= girl.age %>
+		</div>
+	</div>
+</div>
