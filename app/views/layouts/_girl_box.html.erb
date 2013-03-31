@@ -2,7 +2,9 @@
 	<div class="girlName">
 		<%= girl.name %>
 	</div>
-	<a href="/girls/<%= girl.name %>"><img src="https://s3-eu-west-1.amazonaws.com/pearlsgirlsimages/Users/tobybenedyk/Desktop/Work/pearls/public/assets/images/37/original/pearls-girls-girl.png"></a>
+	
+	<a href="/girls/<%= girl.name %>"><img src="https://s3-eu-west-1.amazonaws.com/pearlsgirlsimages/Users/tobybenedyk/Desktop/Work/pearls/public/assets/images/<%=asset_object(girl.id).id%>/original/<%=asset_object(girl.id).image_file_name%>"></a>
+
 	<div class="girlPromoBottom">
 		<div class="girlPromoBottomCategory">
 			Nationality:<br />
