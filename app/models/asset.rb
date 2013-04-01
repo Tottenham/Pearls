@@ -1,7 +1,7 @@
 class Asset < ActiveRecord::Base
   attr_accessible :girl_id, :classification, :image
 
-  belongs_to  :girl
+  belongs_to :girl
 
 	has_attached_file :image,
 	  :storage => :s3,

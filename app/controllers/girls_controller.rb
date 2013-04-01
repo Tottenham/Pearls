@@ -41,7 +41,7 @@ class GirlsController < ApplicationController
 
    respond_to do |format|
      if @girl.save
-       format.html { redirect_to(@girl, :notice => 'Girl was successfully created.') }
+       format.html { redirect_to("/girls/admin_index", :notice => 'Girl was successfully created.') }
        format.xml  { render :xml => @girl, :status => :created, :location => @post }
      else
        format.html { render :action => "new" }
@@ -58,7 +58,7 @@ class GirlsController < ApplicationController
     end
 	  
     if @girl.update_attributes(params[:girl])
-	    redirect_to("/girls", :notice => 'Girl was successfully updated.')
+	    redirect_to("/girls/admin_index", :notice => 'Girl was successfully updated.')
 	  else
 	    redirect_to :back
 	  end
