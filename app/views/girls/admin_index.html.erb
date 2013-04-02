@@ -1,32 +1,32 @@
-<%= render "layouts/admin_header" %>
+<div class="whole">
+  <%= render "layouts/admin_header" %>
 
-<h1>Listing Girls</h1>
+  <h1>Listing Girls</h1>
 
-<table>
-<tr>
-  <th>Name</th>
-  <th>Age</th>
-  <th>Images</th>
-  <th>Featured</th>
-  <th>Tonight</th>
-  <th></th>
-  <th></th>
-</tr>
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Images</th>
+    <th>Featured</th>
+    <th>Tonight</th>
+    <th></th>
+    <th></th>
+  </tr>
 
-<% @girls.each do |girl| %>
-<tr>
-  <td><%= girl.name %></td>
-  <td><%= girl.age %></td>
-  <td><%= girl.assets.count %></td>
-  <td><%= true_to_yes(girl.featured) %></td>
-  <td><%= true_to_yes(girl.tonight) %></td>
-  <td><%= link_to 'Edit', edit_girl_path(girl) %></td>
-  <td><%= link_to 'Destroy', girl, :confirm => 'Are you sure?', :method => :delete %></td>
-</tr>
-<% end %>
-</table>
+  <% @girls.each do |girl| %>
+  <tr>
+    <td><%= girl.name %></td>
+    <td><%= girl.assets.count %></td>
+    <td><%= true_to_yes(girl.featured) %></td>
+    <td><%= true_to_yes(girl.tonight) %></td>
+    <td><%= link_to 'Edit', edit_girl_path(girl) %></td>
+    <td><%= link_to 'Destroy', girl, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+  <% end %>
+  </table>
 
-<br />
+  <br />
 
-<%= link_to 'New Girl', new_girl_path %><br />
-<%= link_to 'Go to Images', assets_path %>
+  <%= link_to 'New Girl', new_girl_path %><br />
+  <%= link_to 'Go to Images', assets_path %>
+</div>

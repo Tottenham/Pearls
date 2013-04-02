@@ -13,9 +13,6 @@ class AssetsController < ApplicationController
   	@girls = Girl.find(:all, :order => "name ASC")
   end
 
-  def show
-  end
-
   def create
    @asset = Asset.new(params[:asset])
 
@@ -28,6 +25,10 @@ class AssetsController < ApplicationController
        format.xml  { render :xml => @asset.errors, :status => :unprocessable_entity }
      end
    end
+  end
+
+  def show
+    @asset = Asset.find(params[:id])
   end
 
   def edit

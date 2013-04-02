@@ -1,26 +1,29 @@
-<%= render "layouts/admin_header" %>
+<div class="whole">
+	<%= render "layouts/admin_header" %>
 
-<h1>Listing Images</h1>
+	<h1>Listing Images</h1>
 
-<table>
-<tr>
-  <th>Girl</th>
-  <th>Name</th>
-  <th></th>
-  <th></th>
-  <th></th>
-</tr>
+	<table>
+	<tr>
+	  <th>Girl</th>
+	  <th>Name</th>
+	  <th></th>
+	  <th></th>
+	  <th></th>
+	</tr>
 
-<% @images.each do |image| %>
-<tr>
-  <td><%= image.girl.name %></td>
-  <td><%= image.image_file_name %></td>
-  <td><%= link_to 'Edit', edit_asset_path(image) %></td>
-  <td><%= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete %></td>
-</tr>
-<% end %>
-</table>
+	<% @images.each do |image| %>
+	<tr>
+	  <td><%= image.girl.name %></td>
+	  <td><%= image.image_file_name %></td>
+	  <td><%= link_to 'Show', asset_path(image) %></td>
+	  <td><%= link_to 'Edit', edit_asset_path(image) %></td>
+	  <td><%= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	<% end %>
+	</table>
 
-<br />
+	<br />
 
-<%= link_to 'New Image', new_asset_path %>
+	<%= link_to 'New Image', new_asset_path %>
+</div>

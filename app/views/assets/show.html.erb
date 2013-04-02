@@ -1,2 +1,4 @@
-<h1>Assets#show</h1>
-<p>Find me in app/views/assets/show.html.erb</p>
+<div class="whole">
+	<img src="https://s3-eu-west-1.amazonaws.com/pearlsgirlsimages/images/<%=@asset.id%>/original/<%=@asset.image_file_name%>"><br />
+	<%= link_to 'Back', "/assets" %>
+</div>
