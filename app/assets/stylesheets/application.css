@@ -125,9 +125,9 @@
  }
 
  .headerBottom {
-  	width: 90%;
+  	width: 95%;
   	display: block;
-    padding: 15px 5%;
+    padding: 15px 0 15px 5%;
  	background-color: #000000;
  }
 
@@ -461,7 +461,7 @@
  	display: inline-block;
  	float: right;
  	font-size: 14.5px;
- 	margin-top: 3px;
+ 	margin-top: -5px;
 }
 
 .ratesBox {
@@ -535,4 +535,12 @@
  	position: absolute;
  	right: 30px;
  	top: 30px;
+ }
+
+ .disclaimerContent p {
+ 	font-size: 12px;
+ }
+
+ .disclaimerContent {
+ 	margin-top: 40px;
  }

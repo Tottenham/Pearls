@@ -22,7 +22,7 @@
 			<div class="showBoxTitle"><%= @girl.name %></div>
 
 			<div class="showBoxDesc">
-				Slim with a delicious enhanced DD bust and perfect English, Anita is a classy sophisticated woman! Always arriving looking her best, expect the unexpected when booking this leggy brunette! Enjoy an evening of naughtiness with Playgirl Anita, call to book now!
+				<%= @girl.description unless @girl.description.blank? %>
 			</div>
 
 			<div class="showBoxInfo">
@@ -49,7 +49,7 @@
 
 			<div class="showPageMain">
 				<% @images.each do |image| %>
-					<img src="<%= image_path(image) %>">
+					<img src="https://s3-eu-west-1.amazonaws.com/pearlsgirlsimages/images/<%=image.id%>/original/<%=image.image_file_name%>">
 				<% end %>
 
 			</div>

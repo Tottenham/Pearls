@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130331154545) do
+ActiveRecord::Schema.define(:version => 20130402134922) do
 
   create_table "assets", :force => true do |t|
     t.integer  "girl_id"
@@ -38,10 +38,11 @@ ActiveRecord::Schema.define(:version => 20130331154545) do
     t.string   "bust_size"
     t.string   "orientation"
     t.integer  "category_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.integer  "featured"
     t.integer  "tonight"
+    t.string   "description", :limit => 400
   end
 
   create_table "users", :force => true do |t|

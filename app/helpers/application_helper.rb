@@ -1,8 +1,11 @@
 module ApplicationHelper
 
 	def is_logged_in?
-		return true if session[:user]
-		false
+		if session[:user_id]
+			return true
+		else
+			redirect_to "/"
+		end
 	end
 
 	def find_asset(id)

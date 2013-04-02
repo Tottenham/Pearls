@@ -1,4 +1,24 @@
 Pearls::Application.routes.draw do
+  get "areas/london"
+
+  get "areas/bedfordshire"
+
+  get "areas/berkshire"
+
+  get "areas/buckinghamshire"
+
+  get "areas/essex"
+
+  get "areas/hertfordshire"
+
+  get "areas/kent"
+
+  get "areas/middlesex"
+
+  get "areas/oxfordshire"
+
+  get "areas/surrey"
+
   get "sessions/new"
 
   get "users/new"
@@ -33,6 +53,12 @@ Pearls::Application.routes.draw do
   get "faq" => "pages#faq", :as => "faq"
   get "work_for_us" => "pages#work_for_us", :as => "work_for_us"
   get "contact" => "pages#contact", :as => "contact"
+
+  get "bedfordshire-escorts" => "areas#bedfordshire", :as => "bedfordshire"
+  get "berkshire-escorts" => "areas#berkshire", :as => "berkshire"
+  get "buckinghamshire-escorts" => "areas#buckinghamshire", :as => "buckinghamshire"
+  get "hertfordshire-escorts" => "areas#hertfordshire", :as => "hertfordshire"
+  get "kent-escorts" => "areas#kent", :as => "kent"
 
   resources :girls
   resources :assets
