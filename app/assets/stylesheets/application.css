@@ -544,3 +544,20 @@
  .disclaimerContent {
  	margin-top: 40px;
  }
+
+ .footerLinks {
+ 	text-align: center;
+ }
+
+ .footerLogoLink a {
+ 	font-size: 11px;
+ }
+
+ .footerLogoLink {
+ 	display: inline-block;
+ 	margin: 0 5px;
+ }
+
+ .footerLogoLink img {
+ 	max-width: 80px;
+ }
